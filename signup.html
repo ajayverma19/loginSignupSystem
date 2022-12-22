@@ -1,0 +1,58 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Register Page</title>
+    <script>
+        function validate()
+        {
+            var x=document.getElementById("1").value;
+            var y=document.getElementById("2").value;
+            var ph=document.getElementById("3").value;
+            if(ph.length>10 || ph.length<10)
+                alert("enter correct phone number");
+          else if(x != y)
+           {
+               alert("password not matching");
+               return false;
+           }
+           else 
+           {
+               alert("registered successfully");
+               return true;
+           }
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="center">
+        <h1>Register</h1>
+        <form method="post" action="signup.jsp">
+            <div class="txt_field">
+                <input type="text" placeholder="user name" name="t1" required>
+    
+                <input type="text" placeholder="phone number" name="p1" id="3" required>
+                <input type="password" placeholder="enter password" name="pass1" id="1" required>
+                <input type="password" placeholder="re-enter password" name="pass2" id="2" required>
+                
+            </div>
+            <div class="pass">
+                <input type="submit" value="Register" onclick="validate()">
+                <div class="signup">
+                  <a href="index.html"> HomePage </a>
+                </div>
+            </div>
+        </form>
+    
+    </div>
+</body>
+</html>
+
+
